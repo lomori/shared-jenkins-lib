@@ -16,7 +16,8 @@ node {
 			])
 	)
     stage("Checkout class"){
-        lib.checkout(lib.org.home.jenkins.Constants.GITHUB_REPO, "main");
+        println lib.dump()
+//        lib.checkout(lib.org.home.jenkins.Constants.GITHUB_REPO, "main");
     }
 
 /*
