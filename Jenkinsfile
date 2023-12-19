@@ -5,7 +5,7 @@
 node {
 
 	def lib = library (
-//		identifier: 'jenkins-lib@home',
+		identifier: 'shared-jenkins-lib@master',
 		retriever:
 			modernSCM([
 				$class: 'GitSCMSource', 
