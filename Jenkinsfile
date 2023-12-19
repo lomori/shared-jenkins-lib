@@ -17,7 +17,7 @@ node {
 	)
     stage("Checkout class"){
         println lib.dump()
-        println lib.properties
+        println lib.getProperties()
             .sort{it.key}
             .collect{it}
             .findAll{!['active'].contains(it.key)}
