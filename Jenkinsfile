@@ -16,7 +16,7 @@ node {
 			])
 	)
     stage("Checkout class"){
-        lib.Checkout.new().checkout(lib.Constants.GITHUB_REPO, "main");
+        lib.checkout(lib.Constants.GITHUB_REPO, "main");
     }
 
 /*

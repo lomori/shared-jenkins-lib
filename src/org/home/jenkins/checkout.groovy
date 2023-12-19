@@ -15,4 +15,4 @@ def checkout(String repo,
             ]]
         ])
     }
-}s
+}
