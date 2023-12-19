@@ -18,9 +18,9 @@ node {
     stage("Checkout class"){
         println lib.dump()
         println lib.getProperties().toString()
-        def constants = lib.org.home.jenkins.Constants.new(this)
-        println constants.GITHUB_REPO
-
+        lib.checkout("git@github.com:lomori/shared-jenkins-lib.git", "main");
+//        def constants = lib.org.home.jenkins.Constants.new(this)
+//        println constants.GITHUB_REPO
 //        lib.checkout(lib.org.home.jenkins.Constants.GITHUB_REPO, "main");
     }
 
