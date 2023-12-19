@@ -11,14 +11,15 @@ node {
 				$class: 'GitSCMSource', 
 //				credentialsId: Constants.GITHUB_CREDENTIALS_ID,
 //				id: Constants.GITHUB_REPO,
-				remote: Constants.GITHUB_REPO,
+				remote: 'git@github.com:lomori/shared-jenkins-lib.git',
 				traits: [[$class: 'jenkins.plugins.git.traits.BranchDiscoveryTrait']]
 			])
 	)
     stage("Checkout class"){
-        Checkout.new().checkout(Constants.GITHUB_REPO, "master");
+        lib.Checkout.new().checkout(Constants.GITHUB_REPO, "master");
     }
 
+/*
     stage("Maven builder"){
         def mavenLib = org.home.jenkins
         def mvn = mavenLib.Maven.builder(this)
@@ -30,4 +31,5 @@ node {
        def constants = mavenLib.Constants.new()
         mvn.execute(constants.MAVEN);
     }
+*/
 }
