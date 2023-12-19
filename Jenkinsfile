@@ -1,6 +1,6 @@
-@Library('org.home.jenkins')
-import org.home.jenkins.Checkout
-import org.home.jenkins.Constants
+//@Library('org.home.jenkins')
+//import org.home.jenkins.Checkout
+//import org.home.jenkins.Constants
 
 node {
 
