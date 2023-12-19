@@ -9,8 +9,8 @@ node {
 		retriever:
 			modernSCM([
 				$class: 'GitSCMSource', 
-				credentialsId: Constants.GITHUB_CREDENTIALS_ID,
-				id: Constants.GITHUB_REPO,
+//				credentialsId: Constants.GITHUB_CREDENTIALS_ID,
+//				id: Constants.GITHUB_REPO,
 				remote: Constants.GITHUB_REPO,
 				traits: [[$class: 'jenkins.plugins.git.traits.BranchDiscoveryTrait']]
 			])
