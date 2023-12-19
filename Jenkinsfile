@@ -17,6 +17,11 @@ node {
 	)
     stage("Checkout class"){
         println lib.dump()
+        println lib.properties
+            .sort{it.key}
+            .collect{it}
+            .findAll{!['active'].contains(it.key)}
+            .join('\n')
 //        lib.checkout(lib.org.home.jenkins.Constants.GITHUB_REPO, "main");
     }
 
