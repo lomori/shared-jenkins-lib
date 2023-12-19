@@ -9,7 +9,7 @@ node {
 		retriever:
 			modernSCM([
 				$class: 'GitSCMSource', 
-//				credentialsId: Constants.GITHUB_CREDENTIALS_ID,
+				credentialsId: 'github-credential',
 //				id: Constants.GITHUB_REPO,
 				remote: 'git@github.com:lomori/shared-jenkins-lib.git',
 				traits: [[$class: 'jenkins.plugins.git.traits.BranchDiscoveryTrait']]
