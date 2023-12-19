@@ -5,7 +5,7 @@
 node {
 
 	def lib = library (
-		identifier: 'shared-jenkins-lib@master',
+		identifier: 'shared-jenkins-lib@main',
 		retriever:
 			modernSCM([
 				$class: 'GitSCMSource', 
@@ -16,7 +16,7 @@ node {
 			])
 	)
     stage("Checkout class"){
-        lib.Checkout.new().checkout(Constants.GITHUB_REPO, "master");
+        lib.Checkout.new().checkout(lib.Constants.GITHUB_REPO, "main");
     }
 
 /*
